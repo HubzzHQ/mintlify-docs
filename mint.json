@@ -39,13 +39,13 @@
     },
     {
       "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "icon": "discord",
+      "url": "https://discord.com/invite/Dy2eZbJuVk"
     },
     {
-      "name": "Blog",
+      "name": "Newsletter",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://substack.com/@hubzz"
     }
   ],
   "navigation": [
