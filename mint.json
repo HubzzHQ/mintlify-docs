@@ -50,6 +50,11 @@
       "name": "Newsletter",
       "icon": "newspaper",
       "url": "https://substack.com/@hubzz"
+    },
+    {
+      "name": "Brand Assets",
+      "icon": "files",
+      "url": "https://substack.com/@hubzz"
     }
   ],
   "navigation": [
