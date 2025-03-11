@@ -52,9 +52,14 @@
       "url": "https://substack.com/@hubzz"
     },
     {
+      "name": "Events Calendar",
+      "icon": "calendar",
+      "url": ""
+    },
+    {
       "name": "Brand Assets",
       "icon": "files",
-      "url": "https://substack.com/@hubzz"
+      "url": ""
     }
   ],
   "navigation": [
