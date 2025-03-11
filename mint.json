@@ -37,11 +37,6 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
       "name": "Community",
       "icon": "discord",
       "url": "https://discord.com/invite/Dy2eZbJuVk"
@@ -55,6 +50,11 @@
       "name": "Brand Assets",
       "icon": "files",
       "url": "https://substack.com/@hubzz"
+    },
+    {
+      "name": "Content Archive",
+      "icon": "book-open-cover",
+      "url": "https://mintlify.com/docs"
     }
   ],
   "navigation": [
