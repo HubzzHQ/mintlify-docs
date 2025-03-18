@@ -1,29 +1,188 @@
 ---
-title: 'Digital Ownership'
+title: Digital Ownership
 description: 'How Hubzz approaches digital assets and ownership'
 ---
 
-# Digital Ownership
+<img
+  className="block dark:hidden"
+  src="/images/digital-ownership.png"
+  alt="Digital Ownership Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/digital-ownership.png"
+  alt="Digital Ownership Dark"
+/>
 
-Hubzz takes a balanced approach to digital assets and ownership, providing the benefits of blockchain technology without the complexity.
+## True Digital Ownership
 
 <Tip>
 Our "Blockchain-on-the-Backend" approach ensures users get the benefits of true digital ownership without needing technical expertise.
 </Tip>
 
-## True Digital Ownership
+Hubzz provides genuine ownership of digital assets through a hybrid approach that combines the best of centralized and decentralized systems:
+
+<CardGroup cols={2}>
+  <Card title="Verifiable Ownership" icon="certificate">
+    All digital assets in Hubzz have verifiable ownership records secured by blockchain technology, even if users don't directly interact with the blockchain.
+    
+    <Frame caption="Asset provenance and ownership verification">
+      <img src="/images/ownership-verification.png" alt="Ownership verification" />
+    </Frame>
+  </Card>
+  <Card title="Transferable Assets" icon="arrows-turn-to-dots">
+    Users can freely trade, gift, or sell their digital assets to other users through secure transfer mechanisms.
+    
+    <Steps>
+      <Step title="Initiate Transfer">
+        Select asset and recipient from your inventory
+      </Step>
+      <Step title="Confirm Details">
+        Review transfer details including any applicable fees
+      </Step>
+      <Step title="Security Verification">
+        Confirm with 2FA or other security measures
+      </Step>
+      <Step title="Transfer Completion">
+        Asset ownership updates with blockchain record
+      </Step>
+    </Steps>
+  </Card>
+  <Card title="Creator Royalties" icon="hand-holding-dollar">
+    Built-in royalty systems ensure original creators receive compensation for secondary sales of their work.
+    
+    <CodeGroup>
+      ```javascript Royalty Implementation
+      // Example royalty calculation for secondary sales
+      function calculateRoyalties(assetId, salePrice) {
+        // Look up the asset's creator and royalty percentage
+        const asset = getAssetDetails(assetId);
+        const creator = asset.creator;
+        const royaltyPercent = asset.royaltyPercent || 10; // Default 10%
+        
+        // Calculate royalty amount
+        const royaltyAmount = salePrice * (royaltyPercent / 100);
+        
+        // Calculate platform fee
+        const platformFeePercent = 15;
+        const platformFee = salePrice * (platformFeePercent / 100);
+        
+        // Calculate seller proceeds
+        const sellerProceeds = salePrice - royaltyAmount - platformFee;
+        
+        return {
+          royaltyAmount,
+          royaltyRecipient: creator,
+          platformFee,
+          sellerProceeds
+        };
+      }
+      ```
+    </CodeGroup>
+  </Card>
+  <Card title="Transparent Provenance" icon="clock-rotate-left">
+    Complete ownership and transaction history for each digital asset, providing confidence in authenticity and origin.
+    
+    <Tabs>
+      <Tab title="Creation Record">
+        <ul>
+          <li>Original creator identity</li>
+          <li>Date and time of creation</li>
+          <li>Original metadata and specifications</li>
+          <li>Edition information (if limited)</li>
+        </ul>
+      </Tab>
+      <Tab title="Transaction History">
+        <ul>
+          <li>Complete chain of ownership</li>
+          <li>Timestamp of each transfer</li>
+          <li>Sale prices (if applicable)</li>
+          <li>Royalties paid to creator</li>
+        </ul>
+      </Tab>
+      <Tab title="Authentication">
+        <ul>
+          <li>Cryptographic verification</li>
+          <li>Tamper-proof ledger</li>
+          <li>Public verification options</li>
+          <li>Fraud prevention measures</li>
+        </ul>
+      </Tab>
+    </Tabs>
+  </Card>
+</CardGroup>
+
+## The Hubzz Ownership Model
 
 <Frame>
-  <img src="/images/digital-assets.png" alt="Digital Assets" />
+  <img src="/images/ownership-spectrum.png" alt="Ownership model spectrum" />
+  <figcaption>Hubzz balances centralized and decentralized approaches to digital ownership</figcaption>
 </Frame>
 
-Digital asset ownership in Hubzz is powered by blockchain technology, enabling users to:
+Hubzz takes a balanced approach to digital assets and ownership, providing the benefits of blockchain technology without the complexity:
 
-- Own virtual items with verifiable provenance
-- Transfer assets between users
-- Trade assets on Hubzz marketplaces
-- Potentially use assets across compatible platforms
-- Retain ownership even if Hubzz were to shut down
+<Tabs>
+  <Tab title="Centralized Benefits">
+    <CardGroup cols={3}>
+      <Card title="Performance" icon="gauge-high">
+        Fast, responsive asset rendering and interactions
+      </Card>
+      <Card title="User Experience" icon="face-smile">
+        Simplified interfaces without technical complexity
+      </Card>
+      <Card title="Support" icon="headset">
+        Customer service for recovery and assistance
+      </Card>
+      <Card title="Content Standards" icon="shield-check">
+        Quality control and content moderation
+      </Card>
+      <Card title="Legal Compliance" icon="scale-balanced">
+        Adherence to regulatory requirements
+      </Card>
+      <Card title="Asset Integration" icon="puzzle-piece">
+        Seamless functionality within the platform
+      </Card>
+    </CardGroup>
+  </Tab>
+  <Tab title="Decentralized Benefits">
+    <CardGroup cols={3}>
+      <Card title="True Ownership" icon="key">
+        Assets controlled by users, not just the platform
+      </Card>
+      <Card title="Permanence" icon="infinity">
+        Assets persist even if the platform changes
+      </Card>
+      <Card title="Transferability" icon="arrow-right-arrow-left">
+        Freedom to trade, sell, or gift assets
+      </Card>
+      <Card title="Creator Royalties" icon="hand-holding-dollar">
+        Automatic royalties on secondary sales
+      </Card>
+      <Card title="Provable Scarcity" icon="gem">
+        Verifiable limited editions and uniqueness
+      </Card>
+      <Card title="Open Standards" icon="code">
+        Potential for cross-platform compatibility
+      </Card>
+    </CardGroup>
+  </Tab>
+  <Tab title="Hubzz Hybrid Approach">
+    <AccordionGroup>
+      <Accordion title="Blockchain-on-the-Backend">
+        Hubzz handles the complexity of blockchain technology behind the scenes, recording ownership and transactions on a blockchain while presenting users with a familiar, intuitive interface.
+      </Accordion>
+      <Accordion title="Progressive Decentralization">
+        Users can begin with a simple, platform-managed experience and gradually engage with more advanced ownership features as they become comfortable.
+      </Accordion>
+      <Accordion title="Optional Direct Control">
+        Advanced users can connect external wallets for more direct control over their assets, while beginners can use simplified platform-managed accounts.
+      </Accordion>
+      <Accordion title="Balanced Governance">
+        Asset policies and ecosystem rules combine community input with platform stewardship, avoiding the extremes of centralized control and ungoverned chaos.
+      </Accordion>
+    </AccordionGroup>
+  </Tab>
+</Tabs>
 
 ## Economic Framework
 
@@ -31,24 +190,127 @@ Digital asset ownership in Hubzz is powered by blockchain technology, enabling u
   <Tab title="Credit System">
     Our simple-to-understand economic units make transactions intuitive:
     
-    - 64 credits = $1 USD
-    - Credits can be purchased with fiat currency
-    - Credits are used for all in-platform transactions
-    - Creators and communities receive credits from sales and events
+    <CardGroup cols={2}>
+      <Card title="Value Ratio" icon="equals">
+        <ul>
+          <li>64 credits = $1 USD</li>
+          <li>Fixed exchange rate for stability</li>
+          <li>No volatile cryptocurrency concerns</li>
+          <li>Predictable value for creators and users</li>
+        </ul>
+      </Card>
+      <Card title="Acquisition" icon="credit-card">
+        <ul>
+          <li>Purchase with fiat currency</li>
+          <li>Major credit cards accepted</li>
+          <li>PayPal and other payment options</li>
+          <li>No cryptocurrency knowledge required</li>
+        </ul>
+      </Card>
+      <Card title="Usage" icon="circle-dollar-to-slot">
+        <ul>
+          <li>Universal currency for all transactions</li>
+          <li>Asset purchases and sales</li>
+          <li>Event tickets and experiences</li>
+          <li>Subscriptions and memberships</li>
+        </ul>
+      </Card>
+      <Card title="Distribution" icon="hand-holding-dollar">
+        <ul>
+          <li>Credits earned from sales and events</li>
+          <li>Convertible back to fiat currency</li>
+          <li>Transparent fee structure</li>
+          <li>Regular payout options for creators</li>
+        </ul>
+      </Card>
+    </CardGroup>
   </Tab>
   <Tab title="Revenue Streams">
     Hubzz enables multiple revenue streams for stakeholders:
     
-    - **For Creators**: Event ticket sales, tips, merchandise, content subscriptions
-    - **For Communities**: Membership fees, revenue shares from events, zone customizations
-    - **For Zone Owners**: Property value appreciation, rental fees, activity-based rewards
+    <Frame caption="Revenue stream comparison by stakeholder type">
+      <img src="/images/revenue-streams.png" alt="Revenue streams comparison" />
+    </Frame>
+    
+    <AccordionGroup>
+      <Accordion title="For Creators">
+        <ul>
+          <li>**Digital Asset Sales**: Primary and secondary sales of virtual items and experiences</li>
+          <li>**Content Subscriptions**: Recurring revenue for premium content access</li>
+          <li>**Event Hosting**: Ticket sales for virtual events and experiences</li>
+          <li>**Direct Support**: Tips and donations from fans and supporters</li>
+          <li>**Commission Work**: Custom creations for individuals or communities</li>
+        </ul>
+      </Accordion>
+      <Accordion title="For Communities">
+        <ul>
+          <li>**Membership Fees**: Optional paid tiers for community participation</li>
+          <li>**Zone Revenue**: Income from activities in community-owned spaces</li>
+          <li>**Collective Merchandise**: Sales of community-branded digital goods</li>
+          <li>**Event Hosting**: Community-organized gatherings and experiences</li>
+          <li>**Shared Creator Rewards**: Percentage of member creator earnings</li>
+        </ul>
+      </Accordion>
+      <Accordion title="For Zone Owners">
+        <ul>
+          <li>**Property Appreciation**: Value growth of well-positioned zones</li>
+          <li>**Rental Income**: Fees from users and communities utilizing space</li>
+          <li>**Activity Fees**: Revenue share from events and transactions in zone</li>
+          <li>**Infrastructure Services**: Premium zone features and capabilities</li>
+          <li>**Development & Resale**: Improving and selling zone properties</li>
+        </ul>
+      </Accordion>
+    </AccordionGroup>
   </Tab>
   <Tab title="Fee Structure">
     Transparent fee structure that fairly compensates all participants:
     
-    - Primary sales: 85% to creator, 15% to platform
-    - Secondary sales: 70% to seller, 10% to original creator, 20% to platform
-    - Event tickets: 90% to host, 10% to platform
+    <Table>
+      <Thead>
+        <Tr>
+          <Th>Transaction Type</Th>
+          <Th>Creator/Seller</Th>
+          <Th>Original Creator (Resales)</Th>
+          <Th>Platform Fee</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr>
+          <Td>Primary Asset Sales</Td>
+          <Td>85%</Td>
+          <Td>N/A</Td>
+          <Td>15%</Td>
+        </Tr>
+        <Tr>
+          <Td>Secondary Sales</Td>
+          <Td>70%</Td>
+          <Td>10%</Td>
+          <Td>20%</Td>
+        </Tr>
+        <Tr>
+          <Td>Event Tickets</Td>
+          <Td>90%</Td>
+          <Td>N/A</Td>
+          <Td>10%</Td>
+        </Tr>
+        <Tr>
+          <Td>Tips/Direct Support</Td>
+          <Td>95%</Td>
+          <Td>N/A</Td>
+          <Td>5%</Td>
+        </Tr>
+        <Tr>
+          <Td>Subscriptions</Td>
+          <Td>85%</Td>
+          <Td>N/A</Td>
+          <Td>15%</Td>
+        </Tr>
+      </Tbody>
+    </Table>
+    
+    <Note>
+    Our fee structure is designed to be competitive with or lower than industry standards, ensuring creators and communities retain the majority of value they generate.
+    </Note>
   </Tab>
 </Tabs>
 
@@ -62,25 +324,170 @@ Hubzz plans to introduce the $HBZ token with utility and governance functions:
 
 <AccordionGroup>
   <Accordion title="Utility Functions">
-    - Staking for premium features
-    - Participation in exclusive events
-    - Priority access to new releases
-    - Enhanced creator tools
-    - Reduced platform fees
+    <CardGroup cols={2}>
+      <Card title="Premium Features" icon="gem">
+        <ul>
+          <li>Access to advanced creator tools</li>
+          <li>Enhanced customization options</li>
+          <li>Priority discovery placement</li>
+          <li>Expanded analytics and insights</li>
+        </ul>
+      </Card>
+      <Card title="Fee Reduction" icon="percent">
+        <ul>
+          <li>Staking tokens reduces platform fees</li>
+          <li>Tiered benefits based on stake amount</li>
+          <li>Loyalty rewards for long-term stakers</li>
+          <li>Special transaction options</li>
+        </ul>
+      </Card>
+      <Card title="Exclusive Access" icon="key">
+        <ul>
+          <li>Token-gated events and experiences</li>
+          <li>Early access to new features</li>
+          <li>Special edition digital assets</li>
+          <li>Premium community access</li>
+        </ul>
+      </Card>
+      <Card title="Ecosystem Participation" icon="sitemap">
+        <ul>
+          <li>Integration with partner platforms</li>
+          <li>Cross-platform asset compatibility</li>
+          <li>Ecosystem governance participation</li>
+          <li>Broader Web3 compatibility</li>
+        </ul>
+      </Card>
+    </CardGroup>
+    
+    <CodeGroup>
+      ```typescript Staking Benefits
+      // Example implementation of token staking benefits
+      interface StakingTier {
+        name: string;
+        minimumStake: number;
+        featureAccess: string[];
+        feeDiscount: number;
+      }
+      
+      // Staking tiers
+      const stakingTiers: StakingTier[] = [
+        {
+          name: "Basic",
+          minimumStake: 0,
+          featureAccess: ["Standard Features"],
+          feeDiscount: 0
+        },
+        {
+          name: "Silver",
+          minimumStake: 1000,
+          featureAccess: ["Standard Features", "Enhanced Analytics", "Priority Support"],
+          feeDiscount: 10 // 10% fee reduction
+        },
+        {
+          name: "Gold",
+          minimumStake: 5000,
+          featureAccess: ["Standard Features", "Enhanced Analytics", "Priority Support", "Pro Creator Tools", "Early Access"],
+          feeDiscount: 25 // 25% fee reduction
+        },
+        {
+          name: "Platinum",
+          minimumStake: 25000,
+          featureAccess: ["All Platform Features", "White Glove Support", "Custom Branding"],
+          feeDiscount: 50 // 50% fee reduction
+        }
+      ];
+      ```
+    </CodeGroup>
   </Accordion>
   <Accordion title="Governance Functions">
-    - Voting on platform development priorities
-    - Proposing new features
-    - Participating in community decisions
-    - Influencing platform policies
-    - Contributing to grant distribution
+    <Frame caption="Hubzz governance framework">
+      <img src="/images/governance-framework.png" alt="Governance framework" />
+    </Frame>
+    
+    <Tabs>
+      <Tab title="Voting Rights">
+        <Steps>
+          <Step title="Proposal Phase">
+            Token holders can submit and endorse proposals for platform changes
+          </Step>
+          <Step title="Discussion Period">
+            Open debate and refinement of proposals in governance forums
+          </Step>
+          <Step title="Voting">
+            Weighted voting based on token holdings and staking duration
+          </Step>
+          <Step title="Implementation">
+            Successful proposals enter development and release cycle
+          </Step>
+        </Steps>
+      </Tab>
+      <Tab title="Governance Scope">
+        <ul>
+          <li>**Platform Development**: Prioritization of new features and improvements</li>
+          <li>**Economic Parameters**: Adjustments to fee structures and reward systems</li>
+          <li>**Content Standards**: Evolution of community guidelines and moderation policies</li>
+          <li>**Treasury Allocation**: Distribution of community funds for platform initiatives</li>
+          <li>**Partnership Decisions**: Input on strategic ecosystem collaborations</li>
+        </ul>
+      </Tab>
+      <Tab title="Delegation System">
+        <Frame caption="Token delegation process">
+          <img src="/images/delegation-process.png" alt="Delegation process" />
+        </Frame>
+        
+        <Note>
+        Users can delegate their governance rights to trusted representatives without transferring tokens, allowing for participation without active management.
+        </Note>
+      </Tab>
+    </Tabs>
   </Accordion>
   <Accordion title="Token Distribution">
-    - 30% Community & Ecosystem
-    - 25% Team & Advisors (with vesting)
-    - 20% Platform Development
-    - 15% Public Sale
-    - 10% Marketing & Partnerships
+    <Frame caption="$HBZ token allocation by category">
+      <img src="/images/token-allocation.png" alt="Token allocation" />
+    </Frame>
+    
+    <CardGroup cols={2}>
+      <Card title="Community & Ecosystem (30%)" icon="users">
+        <ul>
+          <li>User rewards and incentives</li>
+          <li>Community grants program</li>
+          <li>Creator incentives</li>
+          <li>Ecosystem development fund</li>
+        </ul>
+      </Card>
+      <Card title="Team & Advisors (25%)" icon="people-group">
+        <ul>
+          <li>Core team allocation</li>
+          <li>Future team members</li>
+          <li>Advisors and experts</li>
+          <li>1 year cliff, 3 year vesting</li>
+        </ul>
+      </Card>
+      <Card title="Platform Development (20%)" icon="code">
+        <ul>
+          <li>Technical infrastructure</li>
+          <li>Product development</li>
+          <li>Security audits</li>
+          <li>Research and innovation</li>
+        </ul>
+      </Card>
+      <Card title="Public Sale (15%)" icon="store">
+        <ul>
+          <li>Initial token offering</li>
+          <li>Multiple distribution rounds</li>
+          <li>Community access priority</li>
+          <li>Liquidity provision</li>
+        </ul>
+      </Card>
+      <Card title="Marketing & Partnerships (10%)" icon="handshake">
+        <ul>
+          <li>Strategic partnerships</li>
+          <li>Growth initiatives</li>
+          <li>Brand development</li>
+          <li>Community expansion</li>
+        </ul>
+      </Card>
+    </CardGroup>
   </Accordion>
 </AccordionGroup>
 
@@ -92,11 +499,254 @@ Hubzz provides blockchain benefits without requiring users to understand the tec
 
 Users can enjoy the advantages of blockchain technology without dealing with its complexity:
 
-- No need to manage private keys or understand wallets
-- Option to use traditional login methods (email, social)
-- Advanced users can connect external wallets if desired
-- Seamless fiat on-ramps for purchasing credits
-- Intuitive UI that hides blockchain complexity
-- Ability to gradually learn and engage with Web3 features at user's own pace
+<CardGroup cols={2}>
+  <Card title="Simplified Access" icon="door-open">
+    <Tabs>
+      <Tab title="Traditional Login">
+        <ul>
+          <li>Email and password authentication</li>
+          <li>Social login integration</li>
+          <li>Two-factor authentication</li>
+          <li>No crypto wallet required</li>
+        </ul>
+      </Tab>
+      <Tab title="Advanced Mode">
+        <ul>
+          <li>Optional wallet connection</li>
+          <li>Self-custody options</li>
+          <li>Direct blockchain transactions</li>
+          <li>External wallet compatibility</li>
+        </ul>
+      </Tab>
+    </Tabs>
+  </Card>
+  <Card title="Managed Custody" icon="vault">
+    <ul>
+      <li>**Platform Custody**: Secure storage of digital assets by default</li>
+      <li>**Recovery Systems**: Account recovery options if credentials are lost</li>
+      <li>**Security Measures**: Enterprise-grade protection of user assets</li>
+      <li>**Fraud Protection**: Dispute resolution and transaction reversal capabilities</li>
+    </ul>
+    
+    <Note>
+    For beginners, Hubzz manages the technical aspects of digital ownership, eliminating the risk of permanent loss due to forgotten passwords or private keys.
+    </Note>
+  </Card>
+  <Card title="Seamless Transactions" icon="money-bill-transfer">
+    <Steps>
+      <Step title="Simplified Purchase">
+        Buy digital assets with credit card or platform credits
+      </Step>
+      <Step title="Behind-the-Scenes Processing">
+        Platform handles blockchain recording invisibly
+      </Step>
+      <Step title="Instant Confirmation">
+        Ownership confirmation without blockchain delays
+      </Step>
+      <Step title="Available Immediately">
+        Assets ready for use without waiting for blockchain validation
+      </Step>
+    </Steps>
+  </Card>
+  <Card title="Progressive Learning" icon="graduation-cap">
+    <Frame caption="Progressive blockchain engagement">
+      <img src="/images/progressive-engagement.png" alt="Progressive blockchain engagement" />
+    </Frame>
+    
+    <ul>
+      <li>**Gradual Introduction**: Blockchain concepts introduced as users become comfortable</li>
+      <li>**Optional Education**: Resources to learn about Web3 at the user's pace</li>
+      <li>**Feature Depth**: Progressive reveal of more advanced ownership features</li>
+      <li>**Transition Path**: Clear pathway to more direct blockchain engagement</li>
+    </ul>
+  </Card>
+</CardGroup>
+
+## Asset Types and Capabilities
+
+<AccordionGroup>
+  <Accordion title="Virtual Items">
+    Digital objects that users can own, trade, and use within the platform.
+    
+    <CardGroup cols={3}>
+      <Card title="Wearables" icon="shirt">
+        Clothing and accessories for avatars
+      </Card>
+      <Card title="Decorative Items" icon="couch">
+        Objects to personalize spaces
+      </Card>
+      <Card title="Functional Tools" icon="screwdriver-wrench">
+        Items with utility or special capabilities
+      </Card>
+      <Card title="Collectibles" icon="gem">
+        Limited edition items with rarity value
+      </Card>
+      <Card title="Interactive Objects" icon="cube">
+        Items with dynamic behaviors
+      </Card>
+      <Card title="Media Items" icon="photo-film">
+        Music, art, and visual objects
+      </Card>
+    </CardGroup>
+  </Accordion>
+  <Accordion title="Digital Spaces">
+    Ownable virtual real estate and zones within the Hubzz platform.
+    
+    <Frame caption="Zone ownership capabilities">
+      <img src="/images/zone-ownership.png" alt="Zone ownership capabilities" />
+    </Frame>
+    
+    <CardGroup cols={2}>
+      <Card title="Personal Spaces" icon="house">
+        <ul>
+          <li>Customizable personal environments</li>
+          <li>Controlled access permissions</li>
+          <li>Personalized themes and layouts</li>
+          <li>Showcases for owned digital assets</li>
+        </ul>
+      </Card>
+      <Card title="Community Zones" icon="users">
+        <ul>
+          <li>Larger areas for community gatherings</li>
+          <li>Configurable member permissions</li>
+          <li>Community branding and identity</li>
+          <li>Shared ownership structures</li>
+        </ul>
+      </Card>
+      <Card title="Commercial Venues" icon="store">
+        <ul>
+          <li>Spaces for commercial activities</li>
+          <li>Monetization capabilities</li>
+          <li>Visitor analytics and insights</li>
+          <li>Promotional and marketing tools</li>
+        </ul>
+      </Card>
+      <Card title="Event Spaces" icon="calendar-days">
+        <ul>
+          <li>Venues for performances and gatherings</li>
+          <li>Specialized event capabilities</li>
+          <li>Ticketing and access control</li>
+          <li>Dynamic configuration options</li>
+        </ul>
+      </Card>
+    </CardGroup>
+  </Accordion>
+  <Accordion title="Experiences">
+    Interactive content that creators can distribute, and users can own.
+    
+    <Tabs>
+      <Tab title="Games & Activities">
+        <ul>
+          <li>Mini-games and interactive experiences</li>
+          <li>Multiplayer activities and challenges</li>
+          <li>Competitive and cooperative experiences</li>
+          <li>Achievement and progression systems</li>
+        </ul>
+      </Tab>
+      <Tab title="Media Experiences">
+        <ul>
+          <li>Interactive stories and narratives</li>
+          <li>Music and audio experiences</li>
+          <li>Visual art and exhibitions</li>
+          <li>Mixed media presentations</li>
+        </ul>
+      </Tab>
+      <Tab title="Utility Applications">
+        <ul>
+          <li>Productivity and collaboration tools</li>
+          <li>Educational and training experiences</li>
+          <li>Community management utilities</li>
+          <li>Creative tools and resources</li>
+        </ul>
+      </Tab>
+    </Tabs>
+    
+    <CodeGroup>
+      ```javascript Experience Distribution
+      // Example of experience distribution system
+      class ExperienceDistribution {
+        // Create a new distributable experience
+        createExperience(creator, experienceData) {
+          const experience = {
+            id: generateUniqueId(),
+            creator: creator.id,
+            title: experienceData.title,
+            description: experienceData.description,
+            type: experienceData.type,
+            content: experienceData.content,
+            distributionModel: experienceData.distributionModel || "free",
+            price: experienceData.price || 0,
+            maxSupply: experienceData.maxSupply || null,
+            currentSupply: 0,
+            createdAt: new Date(),
+            metadata: experienceData.metadata || {}
+          };
+          
+          // Register on blockchain if distributable as an owned asset
+          if (experience.distributionModel !== "free") {
+            registerExperienceAsset(experience);
+          }
+          
+          // Store in database
+          saveExperience(experience);
+          
+          return experience;
+        }
+        
+        // Acquire an experience (purchase, claim, etc.)
+        acquireExperience(user, experienceId) {
+          const experience = getExperience(experienceId);
+          
+          // Check availability
+          if (experience.maxSupply !== null && 
+              experience.currentSupply >= experience.maxSupply) {
+            return { success: false, reason: "Supply limit reached" };
+          }
+          
+          // Process transaction if needed
+          if (experience.distributionModel === "paid") {
+            const transactionResult = processPayment(user, experience.creator, experience.price);
+            if (!transactionResult.success) {
+              return { success: false, reason: "Payment failed" };
+            }
+          }
+          
+          // Record ownership
+          const ownership = {
+            user: user.id,
+            experience: experienceId,
+            acquiredAt: new Date()
+          };
+          
+          saveOwnership(ownership);
+          
+          // Update supply if limited
+          if (experience.maxSupply !== null) {
+            experience.currentSupply += 1;
+            updateExperience(experience);
+          }
+          
+          return { success: true, ownership: ownership };
+        }
+      }
+      ```
+    </CodeGroup>
+  </Accordion>
+  <Accordion title="Custom Asset Types">
+    Extensible framework for defining new types of ownable digital assets.
+    
+    <Frame caption="Custom asset creation flow">
+      <img src="/images/custom-asset-creation.png" alt="Custom asset creation flow" />
+    </Frame>
+    
+    <Note>
+    The Hubzz platform allows for the creation of novel asset types with custom properties, behaviors, and economic models, enabling innovation beyond predefined categories.
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+While ownership is important, Hubzz focuses on making digital assets useful and meaningful. The value of ownership comes from utility, community relevance, and creative expression, not just artificial scarcity.
+</Tip>
 
 Learn more about how digital ownership integrates with our [platform economy](/platform/digital-economy). 
