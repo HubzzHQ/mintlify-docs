@@ -1,15 +1,15 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Hubzz Documentation",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#735FFA",
-    "light": "#735FFA",
-    "dark": "#735FFA",
+    "primary": "#4a2afc",
+    "light": "#8257ff",
+    "dark": "#3a1ddb",
     "anchors": {
       "from": "#604FD0",
       "to": "#735FFA"
@@ -54,7 +54,7 @@
     {
       "name": "Content Archive",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://hubzz.com/docs"
     }
   ],
   "navigation": [
@@ -69,26 +69,32 @@
     {
       "group": "The Virtual World",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "the-virtual-world/key-features",
+        "the-virtual-world/platform-highlights",
+        "the-virtual-world/digital-ownership",
+        "the-virtual-world/immersive-environment"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Platform",
+      "pages": [
+        "platform/digital-economy",
+        "platform/community-age",
+        "platform/value-propositions",
+        "platform/comparative-analysis"
+      ]
+    },
+    {
+      "group": "Financial Information",
+      "pages": [
+        "financial/economic-framework",
+        "financial/financial-summary"
+      ]
+    },
+    {
+      "group": "API Reference",
       "pages": [
         "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
       ]
     }
   ],

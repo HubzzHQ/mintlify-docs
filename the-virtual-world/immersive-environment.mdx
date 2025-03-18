@@ -1,0 +1,139 @@
+---
+title: 'Immersive Environment'
+description: 'Explore the rich, interactive virtual world of Hubzz'
+---
+
+# Immersive Environment
+
+Hubzz creates a rich, immersive virtual world that engages users at their preferred level of interaction, from passive viewing to full immersion.
+
+## Multi-Modal Engagement
+
+<Frame>
+  <img src="/images/multi-modal.png" alt="Multi-Modal Engagement" />
+  <figcaption>Users can choose their preferred level of engagement</figcaption>
+</Frame>
+
+Hubzz offers multiple ways to engage with the platform:
+
+<Tabs>
+  <Tab title="Passive Mode">
+    Similar to social media browsing:
+    - Scroll through a feed of events and content
+    - Watch streams and recordings
+    - Minimal interaction required
+    - Perfect for quick check-ins or limited time
+  </Tab>
+  <Tab title="Active 2D">
+    Enhanced engagement without 3D:
+    - Interactive panels and interfaces
+    - Text and voice chat
+    - React to content and events
+    - Participate in communities
+  </Tab>
+  <Tab title="Active 3D">
+    Full spatial experience:
+    - Navigate 3D environments
+    - Customize and control avatar
+    - Interact with spatial elements
+    - Attend events in immersive mode
+  </Tab>
+  <Tab title="VR Mode">
+    Most immersive experience:
+    - Full VR support
+    - Gesture-based interactions
+    - Spatial audio and presence
+    - Complete immersion in events
+  </Tab>
+</Tabs>
+
+Users can seamlessly transition between these modes based on their preferences, available time, and device capabilities.
+
+## Spatial Design
+
+<CardGroup cols={2}>
+  <Card title="Zone-Based Architecture" icon="map">
+    Hubzz's virtual world is organized into distinct zones, each with its own purpose, theme, and ownership structure. This creates a natural organization to the world and enables clearer navigation and discovery.
+  </Card>
+  <Card title="Dynamic Environments" icon="wand-magic-sparkles">
+    Environments respond to events, time of day, number of participants, and other factors to create dynamic, evolving spaces that feel alive and responsive.
+  </Card>
+  <Card title="Optimized Visuals" icon="eye">
+    High-quality 3D environments that balance visual appeal with performance, ensuring the platform runs well across a wide range of devices.
+  </Card>
+  <Card title="Spatial Audio" icon="headphones">
+    Direction-based sound enhances immersion and facilitates more natural social interactions in 3D environments.
+  </Card>
+</CardGroup>
+
+## Expressive Avatars
+
+<Note>
+Avatars are the user's representation in the Hubzz virtual world, designed to balance expressiveness, performance, and personalization.
+</Note>
+
+Hubzz avatars feature:
+
+- **Customizable Appearance**: Extensive options for personalization
+- **Expressive Animations**: Rich set of gestures and expressions
+- **Outfit System**: Mix and match clothing and accessories
+- **Digital Identity**: Persistent across all zones and experiences
+- **Performance Optimization**: Automatically adjusts detail level based on device capability
+
+<Steps>
+  <Step title="Create Your Avatar">
+    Start with a base template and customize it to your liking with intuitive controls
+  </Step>
+  <Step title="Express Yourself">
+    Use the emotion wheel to trigger expressions and gestures during interactions
+  </Step>
+  <Step title="Personalize Your Style">
+    Collect, purchase, or earn outfit items to make your avatar unique
+  </Step>
+  <Step title="Level Up Your Presence">
+    Unlock premium animations and effects as you engage with the platform
+  </Step>
+</Steps>
+
+## Interactive Objects
+
+Throughout the Hubzz virtual world, users can interact with various objects that enhance the experience:
+
+<CodeGroup>
+  ```typescript Activation
+  // Example of object interaction
+  class InteractiveObject {
+    // Object responds to user proximity
+    onUserApproach(user) {
+      this.showInteractionPrompt(user);
+    }
+    
+    // Object responds to user interaction
+    onInteract(user, interactionType) {
+      switch(interactionType) {
+        case 'click':
+          this.primaryAction(user);
+          break;
+        case 'hold':
+          this.secondaryAction(user);
+          break;
+        // Other interaction types
+      }
+    }
+  }
+  ```
+
+  ```typescript Object Types
+  // Different types of interactive objects
+  const ObjectTypes = {
+    MEDIA_PLAYER: "Displays videos, images, or presentations",
+    PORTAL: "Teleports users to different locations",
+    MINI_GAME: "Offers simple games or activities",
+    INFORMATION: "Provides details about locations or events",
+    COMMERCE: "Enables purchases or transactions",
+    SOCIAL: "Facilitates group activities or interactions"
+  }
+  ```
+</CodeGroup>
+
+Ready to learn more? Explore our [creator tools](/the-virtual-world/creator-tools) to see how you can build in the Hubzz virtual world. 
