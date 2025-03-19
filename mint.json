@@ -53,34 +53,39 @@
   ],
   "navigation": [
     {
-      "group": "Introduction",
+      "group": "Getting Started",
       "pages": [
         "introduction"
       ]
     },
     {
-      "group": "The Virtual World",
+      "group": "Platform Overview",
       "pages": [
-        "the-virtual-world/key-features",
         "the-virtual-world/platform-highlights",
-        "the-virtual-world/digital-ownership",
-        "the-virtual-world/immersive-environment"
-      ]
-    },
-    {
-      "group": "Platform",
-      "pages": [
-        "platform/digital-economy",
-        "platform/community-age",
-        "platform/value-propositions",
         "platform/comparative-analysis"
       ]
     },
     {
-      "group": "Financial Information",
+      "group": "Immersive Experience",
       "pages": [
+        "the-virtual-world/immersive-environment",
+        "the-virtual-world/key-features",
+        "platform/community-age"
+      ]
+    },
+    {
+      "group": "Economic System",
+      "pages": [
+        "platform/digital-economy",
+        "the-virtual-world/digital-ownership",
         "financial/economic-framework",
         "financial/financial-summary"
+      ]
+    },
+    {
+      "group": "For Stakeholders",
+      "pages": [
+        "platform/value-propositions"
       ]
     }
   ],
