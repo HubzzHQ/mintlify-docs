@@ -1,15 +1,15 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Hubzz Documentation",
+  "name": "Starter Kit",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#4a2afc",
-    "light": "#8257ff",
-    "dark": "#3a1ddb",
+    "primary": "#735FFA",
+    "light": "#735FFA",
+    "dark": "#735FFA",
     "anchors": {
       "from": "#604FD0",
       "to": "#735FFA"
@@ -29,6 +29,12 @@
     "name": "Launch Demo",
     "url": "https://demo.hubzz.com"
   },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
   "anchors": [
     {
       "name": "Community",
@@ -48,44 +54,41 @@
     {
       "name": "Content Archive",
       "icon": "book-open-cover",
-      "url": "https://hubzz.com/docs"
+      "url": "https://mintlify.com/docs"
     }
   ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Introduction",
       "pages": [
-        "introduction"
+        "introduction",
+        "quickstart",
+        "development"
       ]
     },
     {
-      "group": "Platform Overview",
+      "group": "The Virtual World",
       "pages": [
-        "the-virtual-world/platform-highlights",
-        "platform/comparative-analysis"
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation",
+        "essentials/reusable-snippets"
       ]
     },
     {
-      "group": "Immersive Experience",
+      "group": "API Documentation",
       "pages": [
-        "the-virtual-world/immersive-environment",
-        "the-virtual-world/key-features",
-        "platform/community-age"
+        "api-reference/introduction"
       ]
     },
     {
-      "group": "Economic System",
+      "group": "Endpoint Examples",
       "pages": [
-        "platform/digital-economy",
-        "the-virtual-world/digital-ownership",
-        "financial/economic-framework",
-        "financial/financial-summary"
-      ]
-    },
-    {
-      "group": "For Stakeholders",
-      "pages": [
-        "platform/value-propositions"
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/delete"
       ]
     }
   ],
