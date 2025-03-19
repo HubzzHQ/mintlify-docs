@@ -29,12 +29,6 @@
     "name": "Launch Demo",
     "url": "https://demo.hubzz.com"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Community",
@@ -61,9 +55,7 @@
     {
       "group": "Introduction",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
     {
@@ -89,12 +81,6 @@
       "pages": [
         "financial/economic-framework",
         "financial/financial-summary"
-      ]
-    },
-    {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/introduction"
       ]
     }
   ],
