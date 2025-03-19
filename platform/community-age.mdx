@@ -49,67 +49,14 @@ Communities naturally progress through different phases as they grow and mature.
   <Step title="Maturation">
     Established communities require economic sustainability and specialized features. Hubzz offers monetization paths, advanced governance systems, and integration options to help mature communities thrive.
     
-    <CodeGroup>
-      ```javascript Community Economy
-      // Example community monetization options
-      const monetizationOptions = {
-        membershipTiers: [
-          { name: "Basic", price: 0, features: ["Access to public spaces", "Standard participation"] },
-          { name: "Supporter", price: 5, features: ["Exclusive events", "Custom badge", "Extended privileges"] },
-          { name: "Premium", price: 15, features: ["Private spaces", "Priority access", "Governance rights"] }
-        ],
-        
-        revenueStreams: [
-          { type: "Event Hosting", revenueSplit: { community: 0.85, platform: 0.15 } },
-          { type: "Space Rentals", revenueSplit: { community: 0.80, platform: 0.20 } },
-          { type: "Digital Goods", revenueSplit: { community: 0.75, creator: 0.10, platform: 0.15 } }
-        ],
-        
-        // Advanced economic tools
-        economicGovernance: {
-          treasuryManagement: true,
-          communityVoting: true,
-          revenueDistribution: true,
-          grantPrograms: true
-        }
-      };
-      ```
-      
-      ```typescript Governance System
-      interface GovernanceSystem {
-        // Role management
-        roles: Role[];
-        permissions: Permission[];
-        
-        // Decision making
-        votingSystem: {
-          proposalCreation: boolean;
-          votingRights: VotingRight[];
-          quorumRequirements: number;
-          majorityThreshold: number;
-        };
-        
-        // Moderation tools
-        moderation: {
-          contentFilters: ContentFilter[];
-          appealSystem: boolean;
-          moderatorAccountability: boolean;
-          automatedSystems: AutomatedSystem[];
-        };
-      }
-      
-      // Example implementation for a mature community
-      const matureCommunityGovernance: GovernanceSystem = {
-        roles: [
-          { name: "Member", basePermissions: ["read", "comment"] },
-          { name: "Contributor", basePermissions: ["read", "comment", "post", "create"] },
-          { name: "Moderator", basePermissions: ["read", "comment", "post", "create", "moderate"] },
-          { name: "Admin", basePermissions: ["all"] }
-        ],
-        // Additional configuration...
-      };
-      ```
-    </CodeGroup>
+    <CardGroup cols={2}>
+      <Card title="Monetization Options" icon="money-bill-wave">
+        Multiple revenue streams for sustainable community operations
+      </Card>
+      <Card title="Advanced Governance" icon="gavel">
+        Sophisticated tools for community leadership and management
+      </Card>
+    </CardGroup>
   </Step>
   <Step title="Evolution">
     Communities eventually need to adapt or transform. Our platform provides data insights, flexible restructuring tools, and pathways to explore new models without losing existing members or content.
@@ -217,34 +164,14 @@ Hubzz's approach to community engagement recognizes that not all members want to
   <Tab title="Active Contributors">
     Users who regularly engage through comments, discussions, and content creation. Our platform offers intuitive creation tools, recognition systems, and feedback mechanisms to support these members.
     
-    <CodeGroup>
-      ```javascript Contribution Recognition
-      // Example contributor recognition system
-      const recognitionSystem = {
-        // Recognition mechanisms
-        reputationPoints: {
-          postUpvoted: 5,
-          commentUpvoted: 2,
-          contentFeatured: 25,
-          qualityContribution: 10
-        },
-        
-        // Achievement levels
-        contributorLevels: [
-          { name: "Newcomer", threshold: 0, perks: ["Basic profile badge"] },
-          { name: "Regular", threshold: 100, perks: ["Enhanced visibility", "Custom reaction options"] },
-          { name: "Established", threshold: 500, perks: ["Feature priority", "Content highlights"] },
-          { name: "Pillar", threshold: 1500, perks: ["Special access", "Creator tools", "Recognition"] }
-        ],
-        
-        // Weekly highlights
-        contentSpotlight: {
-          selectionCriteria: ["Engagement rate", "Originality", "Community value"],
-          rewards: ["Featured placement", "Profile highlight", "Extra reputation"]
-        }
-      };
-      ```
-    </CodeGroup>
+    <CardGroup cols={2}>
+      <Card title="Recognition System" icon="award">
+        Achievement levels and reputation points for quality contributions
+      </Card>
+      <Card title="Creation Tools" icon="paintbrush">
+        Intuitive interfaces for content development
+      </Card>
+    </CardGroup>
   </Tab>
   <Tab title="Community Leaders">
     Members who take on organizational and governance roles. Hubzz equips these users with comprehensive moderation tools, analytics dashboards, and community management resources.
@@ -334,35 +261,6 @@ Community building is not one-size-fits-all. What works for gaming communities m
   </Accordion>
   <Accordion title="Content Creator Community">
     A collective of independent content creators established a shared Hubzz zone, pooling resources and audience while maintaining individual brands, leading to 2.5x growth in collective revenue.
-    
-    <CodeGroup>
-      ```javascript Revenue Sharing Model
-      // Example of their collaborative revenue model
-      const revenueSharing = {
-        // Base distribution
-        standardSplit: {
-          directCreator: 0.70,  // Creator whose content directly generated revenue
-          communityPool: 0.20,  // Shared pool for all community creators
-          infrastructure: 0.10   // Maintenance of shared spaces and tools
-        },
-        
-        // Collaborative content
-        collaborationSplit: {
-          primaryCreator: 0.40,
-          collaborators: 0.40,  // Divided based on contribution
-          communityPool: 0.15,
-          infrastructure: 0.05
-        },
-        
-        // Community-wide initiatives
-        communityEvents: {
-          participatingCreators: 0.60,  // Based on involvement
-          communityPool: 0.30,
-          infrastructure: 0.10
-        }
-      };
-      ```
-    </CodeGroup>
     
     <Frame caption="Creator community monthly revenue growth">
       <img src="/images/creator-collective-growth.png" alt="Creator Collective Revenue Growth" />

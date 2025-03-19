@@ -53,41 +53,6 @@ The Hubzz economic framework is built on four foundational principles:
   </Card>
   <Card title="Transparent Mechanisms" icon="glasses">
     Clear understanding of how economic transactions work, with predictable fee structures and distribution models.
-    
-    <CodeGroup>
-      ```javascript Transaction Example
-      // Example of a transaction flow with transparent fee calculation
-      function processPurchase(buyer, item, purchaseAmount) {
-        // Calculate fees based on transaction type
-        const fees = calculateTransparentFees(item, purchaseAmount);
-        
-        // Show detailed breakdown to buyer before confirmation
-        const breakdown = {
-          itemPrice: purchaseAmount,
-          platformFee: fees.platform,
-          creatorRoyalty: fees.creator,
-          taxes: fees.taxes,
-          totalCharge: purchaseAmount + fees.total
-        };
-        
-        // User sees full breakdown before confirming
-        const confirmed = showBreakdownAndConfirm(buyer, breakdown);
-        
-        if (confirmed) {
-          // Process the transaction
-          transferFunds(buyer, item.creator, purchaseAmount, fees);
-          transferItem(item, buyer);
-          
-          // Record transparent receipt
-          generateReceipt(buyer, item, purchaseAmount, fees);
-          
-          return { success: true, receipt: receipt };
-        }
-        
-        return { success: false, reason: "User canceled after fee review" };
-      }
-      ```
-    </CodeGroup>
   </Card>
 </CardGroup>
 
@@ -145,53 +110,6 @@ The Hubzz economic framework enables multiple revenue paths that benefit differe
       </Accordion>
       <Accordion title="Commission Work">
         Custom creations for individuals, communities, and brands.
-        
-        <CodeGroup>
-          ```javascript Commission System
-          // Example commission workflow
-          class CommissionSystem {
-            createCommission(client, creator, requirements) {
-              // Generate commission contract
-              const contract = {
-                client: client.id,
-                creator: creator.id,
-                requirements: requirements,
-                milestones: [],
-                payment: {
-                  amount: 0, // To be determined
-                  schedule: "onCompletion", // Default
-                  escrow: false // Default
-                },
-                status: "draft",
-                created: new Date()
-              };
-              
-              return contract;
-            }
-            
-            negotiateTerms(contract, creatorTerms, clientTerms) {
-              // Negotiation logic
-              // ...
-              
-              // When both parties agree
-              if (termsMatch(creatorTerms, clientTerms)) {
-                contract.status = "agreed";
-                
-                // Optional escrow
-                if (contract.payment.escrow) {
-                  placeInEscrow(client, contract.payment.amount);
-                }
-                
-                return { success: true, contract: contract };
-              }
-              
-              return { success: false, reason: "Terms not matched" };
-            }
-            
-            // Additional methods for milestone tracking, delivery, etc.
-          }
-          ```
-        </CodeGroup>
       </Accordion>
       <Accordion title="Tipping/Support">
         Direct support from community members and fans.
@@ -295,48 +213,7 @@ The Hubzz economic framework enables multiple revenue paths that benefit differe
 
 ## Technical Implementation
 
-The economic framework is implemented through several integrated systems:
-
-```typescript
-// Credit System Implementation
-class HubzzCreditSystem {
-  private exchangeRate: number; // USD to Credits rate
-  
-  constructor(initialRate: number) {
-    this.exchangeRate = initialRate;
-  }
-  
-  // Convert USD to Credits
-  public usdToCredits(usdAmount: number): number {
-    return usdAmount * this.exchangeRate;
-  }
-  
-  // Convert Credits to USD
-  public creditsToUsd(creditAmount: number): number {
-    return creditAmount / this.exchangeRate;
-  }
-  
-  // Process transaction between users
-  public transferCredits(
-    fromUserId: string, 
-    toUserId: string, 
-    creditAmount: number,
-    transactionType: TransactionType
-  ): TransactionResult {
-    // Calculate fees based on transaction type
-    const fees = this.calculateFees(creditAmount, transactionType);
-    
-    // Process transfer logic
-    // ...
-    
-    return {
-      success: true,
-      net_amount: creditAmount - fees.total,
-      fees: fees
-    };
-  }
-}
-```
+The economic framework is implemented through several integrated systems that provide transparent transactions, secure custody of digital assets, and reliable payment processing.
 
 <Warning>
 The economic framework is designed to be compliant with relevant financial regulations. Certain features may have restrictions based on user location and applicable laws.
@@ -446,79 +323,7 @@ All fees are clearly communicated at the point of transaction. There are no hidd
         </ul>
       </Accordion>
       <Accordion title="Technical Implementation">
-        <CodeGroup>
-          ```solidity HBZ Token
-          // SPDX-License-Identifier: MIT
-          pragma solidity ^0.8.0;
-          
-          import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-          import "@openzeppelin/contracts/access/Ownable.sol";
-          import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
-          
-          contract HBZToken is ERC20, ERC20Votes, Ownable {
-              // Token with governance capabilities
-              constructor() 
-                  ERC20("Hubzz Token", "HBZ") 
-                  ERC20Permit("Hubzz Token")
-              {
-                  // Initial distribution
-                  _mint(msg.sender, 1000000000 * 10 ** decimals());
-              }
-              
-              // Governance functions
-              function propose(
-                  address[] memory targets,
-                  uint256[] memory values,
-                  bytes[] memory calldatas,
-                  string memory description
-              ) external returns (uint256) {
-                  // Proposal creation logic
-                  // ...
-              }
-              
-              // Additional utility functions
-              // ...
-          }
-          ```
-          
-          ```typescript Token Integration
-          // Bridge between credit system and token economy
-          class HBZBridge {
-            // Convert credits to HBZ tokens
-            async creditsToHBZ(userId: string, creditAmount: number): Promise<BridgeResult> {
-              // Verify user has sufficient credits
-              if (!this.userHasSufficientCredits(userId, creditAmount)) {
-                return { success: false, reason: "Insufficient credits" };
-              }
-              
-              // Calculate conversion amount
-              const hbzAmount = this.calculateHBZAmount(creditAmount);
-              
-              // Deduct credits
-              await this.deductCredits(userId, creditAmount);
-              
-              // Interact with blockchain to mint/transfer tokens
-              const txResult = await this.blockchainService.transferHBZ(userId, hbzAmount);
-              
-              if (txResult.success) {
-                // Record transaction
-                await this.recordBridgeTransaction(userId, creditAmount, hbzAmount, 'credits-to-hbz');
-                return { success: true, amount: hbzAmount, txHash: txResult.txHash };
-              }
-              
-              // If blockchain transaction failed, refund credits
-              await this.refundCredits(userId, creditAmount);
-              return { success: false, reason: txResult.error };
-            }
-            
-            // Convert HBZ tokens to credits
-            async hbzToCredits(userId: string, hbzAmount: number): Promise<BridgeResult> {
-              // Similar implementation
-              // ...
-            }
-          }
-          ```
-        </CodeGroup>
+        Implementation of token contracts, wallet integration, governance mechanisms, and bridge functionality between credit system and token economy.
       </Accordion>
       <Accordion title="Tokenomics">
         <Frame caption="HBZ token distribution">

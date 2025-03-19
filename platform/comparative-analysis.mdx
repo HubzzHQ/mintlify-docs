@@ -40,65 +40,6 @@ Hubzz has been designed with several key differentiators that position it unique
   </Card>
   <Card title="True Digital Ownership" icon="key">
     Hubzz balances centralized quality control with decentralized ownership, offering genuine digital property rights without sacrificing user experience or performance.
-    
-    <CodeGroup>
-      ```javascript Ownership Example
-      // Example implementation of Hubzz hybrid ownership model
-      class DigitalAsset {
-        constructor(assetData) {
-          this.metadata = assetData.metadata;
-          this.creator = assetData.creator;
-          this.owner = assetData.creator; // Initially the creator
-          this.creationDate = new Date();
-          this.transactionHistory = [];
-          this.royaltyPercent = assetData.royaltyPercent || 10;
-          
-          // Centralized representation for performance
-          this.renderedAsset = this.generateRenderedVersion();
-          
-          // Decentralized record for ownership verification
-          this.blockchainRecord = this.registerOnBlockchain();
-        }
-        
-        transfer(newOwner, purchaseAmount) {
-          // Record the transaction
-          this.transactionHistory.push({
-            from: this.owner,
-            to: newOwner,
-            amount: purchaseAmount,
-            date: new Date()
-          });
-          
-          // Calculate and distribute royalties
-          const royaltyAmount = purchaseAmount * (this.royaltyPercent / 100);
-          const platformFee = purchaseAmount * 0.05;
-          const sellerProceeds = purchaseAmount - royaltyAmount - platformFee;
-          
-          // Pay royalties to original creator
-          payRoyalties(this.creator, royaltyAmount);
-          
-          // Pay platform fee
-          payPlatformFee(platformFee);
-          
-          // Pay seller
-          paySeller(this.owner, sellerProceeds);
-          
-          // Update ownership
-          this.owner = newOwner;
-          
-          // Update blockchain record
-          this.updateBlockchainRecord(newOwner);
-          
-          return {
-            success: true,
-            royaltyPaid: royaltyAmount,
-            platformFee: platformFee,
-            sellerReceived: sellerProceeds
-          };
-        }
-      }
-      ```
-    </CodeGroup>
   </Card>
   <Card title="Technical Accessibility" icon="door-open">
     By removing technical barriers and prioritizing instant access across devices, Hubzz makes virtual world experiences available to mainstream users, not just tech enthusiasts.
@@ -202,53 +143,6 @@ Current offerings in the market leave significant gaps that Hubzz is uniquely po
       </Card>
       <Card title="Technical Architecture" icon="server">
         Browser-based, mobile-first approach with progressive enhancement for higher-end devices.
-        
-        <CodeGroup>
-          ```typescript Architecture Overview
-          interface TechnicalArchitecture {
-            // Core principles
-            principles: string[];
-            
-            // Platform layers
-            layers: {
-              presentation: string[]; // UI/UX components
-              business: string[];     // Core functionality
-              data: string[];         // Storage and retrieval
-              infrastructure: string[]; // Hosting and delivery
-            };
-            
-            // Performance targets
-            performanceTargets: {
-              initialLoadTime: string;
-              interactionLatency: string;
-              deviceSupport: string[];
-            };
-          }
-          
-          const hubzzArchitecture: TechnicalArchitecture = {
-            principles: [
-              "Browser-first delivery",
-              "Progressive enhancement",
-              "Responsive design",
-              "Selective loading",
-              "Edge computing"
-            ],
-            
-            layers: {
-              presentation: ["Adaptive UI", "Multi-modal interfaces", "Device-optimized rendering"],
-              business: ["Engagement systems", "Economic framework", "Community tools"],
-              data: ["Hybrid storage", "Blockchain integration", "Edge caching"],
-              infrastructure: ["Global CDN", "WebGL rendering", "WebRTC communications"]
-            },
-            
-            performanceTargets: {
-              initialLoadTime: "< 5 seconds on average mobile connection",
-              interactionLatency: "< 100ms for core interactions",
-              deviceSupport: ["Modern mobile browsers", "Desktop browsers", "VR-capable devices"]
-            }
-          };
-          ```
-        </CodeGroup>
       </Card>
       <Card title="Market Focus" icon="bullseye-arrow">
         Positioned as the premium digital engagement platform for adult users and communities.

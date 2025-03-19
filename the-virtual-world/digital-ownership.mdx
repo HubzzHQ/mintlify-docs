@@ -50,35 +50,6 @@ Hubzz provides genuine ownership of digital assets through a hybrid approach tha
   </Card>
   <Card title="Creator Royalties" icon="hand-holding-dollar">
     Built-in royalty systems ensure original creators receive compensation for secondary sales of their work.
-    
-    <CodeGroup>
-      ```javascript Royalty Implementation
-      // Example royalty calculation for secondary sales
-      function calculateRoyalties(assetId, salePrice) {
-        // Look up the asset's creator and royalty percentage
-        const asset = getAssetDetails(assetId);
-        const creator = asset.creator;
-        const royaltyPercent = asset.royaltyPercent || 10; // Default 10%
-        
-        // Calculate royalty amount
-        const royaltyAmount = salePrice * (royaltyPercent / 100);
-        
-        // Calculate platform fee
-        const platformFeePercent = 15;
-        const platformFee = salePrice * (platformFeePercent / 100);
-        
-        // Calculate seller proceeds
-        const sellerProceeds = salePrice - royaltyAmount - platformFee;
-        
-        return {
-          royaltyAmount,
-          royaltyRecipient: creator,
-          platformFee,
-          sellerProceeds
-        };
-      }
-      ```
-    </CodeGroup>
   </Card>
   <Card title="Transparent Provenance" icon="clock-rotate-left">
     Complete ownership and transaction history for each digital asset, providing confidence in authenticity and origin.
@@ -358,46 +329,6 @@ Hubzz plans to introduce the $HBZ token with utility and governance functions:
         </ul>
       </Card>
     </CardGroup>
-    
-    <CodeGroup>
-      ```typescript Staking Benefits
-      // Example implementation of token staking benefits
-      interface StakingTier {
-        name: string;
-        minimumStake: number;
-        featureAccess: string[];
-        feeDiscount: number;
-      }
-      
-      // Staking tiers
-      const stakingTiers: StakingTier[] = [
-        {
-          name: "Basic",
-          minimumStake: 0,
-          featureAccess: ["Standard Features"],
-          feeDiscount: 0
-        },
-        {
-          name: "Silver",
-          minimumStake: 1000,
-          featureAccess: ["Standard Features", "Enhanced Analytics", "Priority Support"],
-          feeDiscount: 10 // 10% fee reduction
-        },
-        {
-          name: "Gold",
-          minimumStake: 5000,
-          featureAccess: ["Standard Features", "Enhanced Analytics", "Priority Support", "Pro Creator Tools", "Early Access"],
-          feeDiscount: 25 // 25% fee reduction
-        },
-        {
-          name: "Platinum",
-          minimumStake: 25000,
-          featureAccess: ["All Platform Features", "White Glove Support", "Custom Branding"],
-          feeDiscount: 50 // 50% fee reduction
-        }
-      ];
-      ```
-    </CodeGroup>
   </Accordion>
   <Accordion title="Governance Functions">
     <Frame caption="Hubzz governance framework">
@@ -660,77 +591,6 @@ Users can enjoy the advantages of blockchain technology without dealing with its
         </ul>
       </Tab>
     </Tabs>
-    
-    <CodeGroup>
-      ```javascript Experience Distribution
-      // Example of experience distribution system
-      class ExperienceDistribution {
-        // Create a new distributable experience
-        createExperience(creator, experienceData) {
-          const experience = {
-            id: generateUniqueId(),
-            creator: creator.id,
-            title: experienceData.title,
-            description: experienceData.description,
-            type: experienceData.type,
-            content: experienceData.content,
-            distributionModel: experienceData.distributionModel || "free",
-            price: experienceData.price || 0,
-            maxSupply: experienceData.maxSupply || null,
-            currentSupply: 0,
-            createdAt: new Date(),
-            metadata: experienceData.metadata || {}
-          };
-          
-          // Register on blockchain if distributable as an owned asset
-          if (experience.distributionModel !== "free") {
-            registerExperienceAsset(experience);
-          }
-          
-          // Store in database
-          saveExperience(experience);
-          
-          return experience;
-        }
-        
-        // Acquire an experience (purchase, claim, etc.)
-        acquireExperience(user, experienceId) {
-          const experience = getExperience(experienceId);
-          
-          // Check availability
-          if (experience.maxSupply !== null && 
-              experience.currentSupply >= experience.maxSupply) {
-            return { success: false, reason: "Supply limit reached" };
-          }
-          
-          // Process transaction if needed
-          if (experience.distributionModel === "paid") {
-            const transactionResult = processPayment(user, experience.creator, experience.price);
-            if (!transactionResult.success) {
-              return { success: false, reason: "Payment failed" };
-            }
-          }
-          
-          // Record ownership
-          const ownership = {
-            user: user.id,
-            experience: experienceId,
-            acquiredAt: new Date()
-          };
-          
-          saveOwnership(ownership);
-          
-          // Update supply if limited
-          if (experience.maxSupply !== null) {
-            experience.currentSupply += 1;
-            updateExperience(experience);
-          }
-          
-          return { success: true, ownership: ownership };
-        }
-      }
-      ```
-    </CodeGroup>
   </Accordion>
   <Accordion title="Custom Asset Types">
     Extensible framework for defining new types of ownable digital assets.

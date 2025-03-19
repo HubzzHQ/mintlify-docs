@@ -99,41 +99,25 @@ Hubzz avatars feature:
 
 Throughout the Hubzz virtual world, users can interact with various objects that enhance the experience:
 
-<CodeGroup>
-  ```typescript Activation
-  // Example of object interaction
-  class InteractiveObject {
-    // Object responds to user proximity
-    onUserApproach(user) {
-      this.showInteractionPrompt(user);
-    }
-    
-    // Object responds to user interaction
-    onInteract(user, interactionType) {
-      switch(interactionType) {
-        case 'click':
-          this.primaryAction(user);
-          break;
-        case 'hold':
-          this.secondaryAction(user);
-          break;
-        // Other interaction types
-      }
-    }
-  }
-  ```
-
-  ```typescript Object Types
-  // Different types of interactive objects
-  const ObjectTypes = {
-    MEDIA_PLAYER: "Displays videos, images, or presentations",
-    PORTAL: "Teleports users to different locations",
-    MINI_GAME: "Offers simple games or activities",
-    INFORMATION: "Provides details about locations or events",
-    COMMERCE: "Enables purchases or transactions",
-    SOCIAL: "Facilitates group activities or interactions"
-  }
-  ```
-</CodeGroup>
+<CardGroup cols={2}>
+  <Card title="Media Players" icon="photo-film">
+    Display videos, images, or presentations in the virtual environment
+  </Card>
+  <Card title="Portals" icon="portal-enter">
+    Teleport users to different locations within the Hubzz world
+  </Card>
+  <Card title="Mini-Games" icon="gamepad">
+    Simple games or activities that can be enjoyed alone or with others
+  </Card>
+  <Card title="Information Points" icon="circle-info">
+    Provide details about locations, events, or other elements of the world
+  </Card>
+  <Card title="Commerce Objects" icon="store">
+    Enable purchases or transactions within the virtual environment
+  </Card>
+  <Card title="Social Facilitators" icon="users">
+    Tools that enhance group activities or social interactions
+  </Card>
+</CardGroup>
 
 Ready to learn more? Explore our [creator tools](/the-virtual-world/creator-tools) to see how you can build in the Hubzz virtual world. 
