@@ -35,77 +35,77 @@
     {
       "group": "Introduction",
       "pages": [
-        "introduction"
+        "docs/introduction"
       ]
     },
     {
       "group": "Platform Overview",
       "pages": [
-        "overview"
+        "docs/overview"
       ]
     },
     {
       "group": "User Guides",
       "pages": [
-        "user-guides/casual-users",
-        "user-guides/creators",
-        "user-guides/brands",
-        "user-guides/zone-owners"
+        "docs/user-guides/casual-users",
+        "docs/user-guides/creators",
+        "docs/user-guides/brands",
+        "docs/user-guides/zone-owners"
       ]
     },
     {
       "group": "Our Virtual World",
       "pages": [
-        "virtual-world/index",
-        "virtual-world/properties",
-        "virtual-world/governance"
+        "docs/virtual-world/index",
+        "docs/virtual-world/properties",
+        "docs/virtual-world/governance"
       ]
     },
     {
       "group": "The Experience",
       "pages": [
-        "experience/index",
-        "experience/avatars",
-        "experience/creation-tools",
-        "experience/assets",
-        "experience/dashboard"
+        "docs/experience/index",
+        "docs/experience/avatars",
+        "docs/experience/creation-tools",
+        "docs/experience/assets",
+        "docs/experience/dashboard"
       ]
     },
     {
       "group": "Event System",
       "pages": [
-        "event-system/index",
-        "event-system/venues"
+        "docs/event-system/index",
+        "docs/event-system/venues"
       ]
     },
     {
       "group": "Social Layer",
       "pages": [
-        "social-layer/index",
-        "social-layer/community"
+        "docs/social-layer/index",
+        "docs/social-layer/community"
       ]
     },
     {
       "group": "Tokenomics",
       "pages": [
-        "tokenomics/index",
-        "tokenomics/distribution",
-        "tokenomics/revenue",
-        "tokenomics/rewards"
+        "docs/tokenomics/index",
+        "docs/tokenomics/distribution",
+        "docs/tokenomics/revenue",
+        "docs/tokenomics/rewards"
       ]
     },
     {
       "group": "Technical",
       "pages": [
-        "technical/infrastructure",
-        "technical/roadmap"
+        "docs/technical/infrastructure",
+        "docs/technical/roadmap"
       ]
     },
     {
       "group": "Appendix",
       "pages": [
-        "appendix/glossary",
-        "appendix/references"
+        "docs/appendix/glossary",
+        "docs/appendix/references"
       ]
     }
   ]
