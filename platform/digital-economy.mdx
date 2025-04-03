@@ -1,0 +1,134 @@
+---
+title: 'Digital Economy'
+description: 'Understanding the economic system that powers Hubzz'
+---
+
+# Digital Economy
+
+Hubzz features a robust economic system that creates value for all participants in the ecosystem.
+
+<Frame>
+  <img src="/images/economy-flow.png" alt="Economy Flow" />
+  <figcaption>The flow of value in the Hubzz ecosystem</figcaption>
+</Frame>
+
+## Economic Principles
+
+Our digital economy is built on key principles that ensure fairness, accessibility, and value creation:
+
+<CardGroup cols={2}>
+  <Card title="Value Creation" icon="chart-line">
+    Activities in Hubzz should generate real value for participants
+  </Card>
+  <Card title="Fair Distribution" icon="scale-balanced">
+    Revenue is distributed equitably among creators, communities, and the platform
+  </Card>
+  <Card title="Accessible Entry" icon="door-open">
+    Low barriers to participation in the economic system
+  </Card>
+  <Card title="Transparent Mechanisms" icon="glasses">
+    Clear understanding of how economic transactions work
+  </Card>
+</CardGroup>
+
+## Credit System
+
+<Tip>
+The Hubzz Credit system simplifies transactions while providing a stable unit of value.
+</Tip>
+
+<CodeGroup>
+  ```typescript Credits
+  // Credit system implementation
+  class CreditSystem {
+    // Fixed exchange rate
+    readonly CREDITS_PER_USD = 64;
+    
+    // Convert USD to credits
+    usdToCredits(usdAmount: number): number {
+      return usdAmount * this.CREDITS_PER_USD;
+    }
+    
+    // Convert credits to USD
+    creditsToUsd(credits: number): number {
+      return credits / this.CREDITS_PER_USD;
+    }
+  }
+  ```
+
+  ```typescript Transactions
+  // Example transaction
+  async function purchaseTicket(event, user) {
+    const ticketPriceCredits = event.ticketPriceCredits;
+    
+    // Check user balance
+    if (user.creditBalance >= ticketPriceCredits) {
+      // Deduct credits from user
+      user.creditBalance -= ticketPriceCredits;
+      
+      // Calculate platform fee (10%)
+      const platformFee = ticketPriceCredits * 0.1;
+      
+      // Calculate creator revenue (90%)
+      const creatorRevenue = ticketPriceCredits * 0.9;
+      
+      // Distribute revenue
+      platform.addCredits(platformFee);
+      event.creator.addCredits(creatorRevenue);
+      
+      // Grant ticket to user
+      user.tickets.push(event.generateTicket());
+      
+      return { success: true };
+    }
+    
+    return { success: false, reason: "Insufficient credits" };
+  }
+  ```
+</CodeGroup>
+
+## Revenue Streams
+
+Hubzz enables multiple revenue streams for different stakeholders:
+
+<Tabs>
+  <Tab title="For Creators">
+    - **Event Tickets**: Charge admission for virtual events
+    - **Merchandise**: Sell virtual goods related to content or brand
+    - **Tips/Reactions**: Receive micropayments from audience
+    - **Subscriptions**: Offer exclusive content for subscribers
+    - **Commissions**: Create custom items for users or communities
+  </Tab>
+  <Tab title="For Communities">
+    - **Membership Fees**: Optional paid membership tiers
+    - **Event Hosting**: Revenue share from events in community spaces
+    - **Space Customization**: Design services and themes
+    - **Community NFTs**: Collectibles that represent membership
+    - **Branded Merchandise**: Community-specific virtual items
+  </Tab>
+  <Tab title="For Zone Owners">
+    - **Appreciation**: Value growth of well-positioned zones
+    - **Rental Income**: Lease space to communities or businesses
+    - **Activity Rewards**: Earn from high engagement in your zone
+    - **Development**: Create and sell improvements
+    - **Services**: Offer specialized zone features
+  </Tab>
+</Tabs>
+
+## Fee Structure
+
+<Warning>
+This information represents current fee structures and may be updated as the platform evolves.
+</Warning>
+
+Hubzz implements a transparent fee structure across different transaction types:
+
+| Transaction Type | Creator | Platform | Original Creator (if applicable) | Seller (if applicable) |
+|------------------|---------|----------|----------------------------------|------------------------|
+| Primary Sales | 85% | 15% | - | - |
+| Secondary Sales | - | 20% | 10% | 70% |
+| Event Tickets | 90% | 10% | - | - |
+| Tips/Reactions | 95% | 5% | - | - |
+| Subscriptions | 85% | 15% | - | - |
+
+Learn more about how the digital economy connects with [digital ownership](/the-virtual-world/digital-ownership) and the broader [platform vision](/platform/value-propositions). 
