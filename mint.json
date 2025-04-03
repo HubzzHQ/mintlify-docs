@@ -7,23 +7,9 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-<<<<<<< HEAD
     "primary": "#0D9373",
     "light": "#07C983",
     "dark": "#0D9373"
-=======
-    "primary": "#4a2afc",
-    "light": "#8257ff",
-    "dark": "#3a1ddb",
-    "anchors": {
-      "from": "#604FD0",
-      "to": "#735FFA"
-    },
-    "background": {
-      "light": "#FFFFFF",
-      "dark": "#141416"
-    }
->>>>>>> parent of 96747fe (Update)
   },
   "topbarLinks": [
     {
@@ -31,46 +17,23 @@
       "url": "https://hubzz.io"
     }
   ],
-<<<<<<< HEAD
   "tabs": [
     {
       "name": "Core Components",
       "url": "core-components"
-=======
-  "topbarCtaButton": {
-    "name": "Launch Demo",
-    "url": "https://demo.hubzz.com"
-  },
-  "anchors": [
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.com/invite/Dy2eZbJuVk"
->>>>>>> parent of 96747fe (Update)
     },
     {
       "name": "Tokenomics",
       "url": "tokenomics"
     },
     {
-<<<<<<< HEAD
       "name": "Technical",
       "url": "technical"
-=======
-      "name": "Brand Assets",
-      "icon": "files",
-      "url": "https://substack.com/@hubzz"
-    },
-    {
-      "name": "Content Archive",
-      "icon": "book-open-cover",
-      "url": "https://hubzz.com/docs"
->>>>>>> parent of 96747fe (Update)
     }
   ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Introduction",
       "pages": [
         "introduction"
       ]
@@ -78,7 +41,6 @@
     {
       "group": "Platform Overview",
       "pages": [
-<<<<<<< HEAD
         "overview"
       ]
     },
@@ -144,33 +106,6 @@
       "pages": [
         "appendix/glossary",
         "appendix/references"
-=======
-        "the-virtual-world/platform-highlights",
-        "platform/comparative-analysis"
-      ]
-    },
-    {
-      "group": "Immersive Experience",
-      "pages": [
-        "the-virtual-world/immersive-environment",
-        "the-virtual-world/key-features",
-        "platform/community-age"
-      ]
-    },
-    {
-      "group": "Economic System",
-      "pages": [
-        "platform/digital-economy",
-        "the-virtual-world/digital-ownership",
-        "financial/economic-framework",
-        "financial/financial-summary"
-      ]
-    },
-    {
-      "group": "For Stakeholders",
-      "pages": [
-        "platform/value-propositions"
->>>>>>> parent of 96747fe (Update)
       ]
     }
   ]
