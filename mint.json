@@ -7,6 +7,11 @@
   },
   "favicon": "/favicon.png",
   "colors": {
+<<<<<<< HEAD
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373"
+=======
     "primary": "#4a2afc",
     "light": "#8257ff",
     "dark": "#3a1ddb",
@@ -18,6 +23,7 @@
       "light": "#FFFFFF",
       "dark": "#141416"
     }
+>>>>>>> parent of 96747fe (Update)
   },
   "topbarLinks": [
     {
@@ -25,6 +31,12 @@
       "url": "https://hubzz.io"
     }
   ],
+<<<<<<< HEAD
+  "tabs": [
+    {
+      "name": "Core Components",
+      "url": "core-components"
+=======
   "topbarCtaButton": {
     "name": "Launch Demo",
     "url": "https://demo.hubzz.com"
@@ -34,8 +46,17 @@
       "name": "Community",
       "icon": "discord",
       "url": "https://discord.com/invite/Dy2eZbJuVk"
+>>>>>>> parent of 96747fe (Update)
     },
     {
+      "name": "Tokenomics",
+      "url": "tokenomics"
+    },
+    {
+<<<<<<< HEAD
+      "name": "Technical",
+      "url": "technical"
+=======
       "name": "Brand Assets",
       "icon": "files",
       "url": "https://substack.com/@hubzz"
@@ -44,6 +65,7 @@
       "name": "Content Archive",
       "icon": "book-open-cover",
       "url": "https://hubzz.com/docs"
+>>>>>>> parent of 96747fe (Update)
     }
   ],
   "navigation": [
@@ -56,6 +78,73 @@
     {
       "group": "Platform Overview",
       "pages": [
+<<<<<<< HEAD
+        "overview"
+      ]
+    },
+    {
+      "group": "User Guides",
+      "pages": [
+        "user-guides/casual-users",
+        "user-guides/creators",
+        "user-guides/brands",
+        "user-guides/zone-owners"
+      ]
+    },
+    {
+      "group": "Our Virtual World",
+      "pages": [
+        "virtual-world/index",
+        "virtual-world/properties",
+        "virtual-world/governance"
+      ]
+    },
+    {
+      "group": "The Experience",
+      "pages": [
+        "experience/index",
+        "experience/avatars",
+        "experience/creation-tools",
+        "experience/assets",
+        "experience/dashboard"
+      ]
+    },
+    {
+      "group": "Event System",
+      "pages": [
+        "event-system/index",
+        "event-system/venues"
+      ]
+    },
+    {
+      "group": "Social Layer",
+      "pages": [
+        "social-layer/index",
+        "social-layer/community"
+      ]
+    },
+    {
+      "group": "Tokenomics",
+      "pages": [
+        "tokenomics/index",
+        "tokenomics/distribution",
+        "tokenomics/revenue",
+        "tokenomics/rewards"
+      ]
+    },
+    {
+      "group": "Technical",
+      "pages": [
+        "technical/infrastructure",
+        "technical/roadmap"
+      ]
+    },
+    {
+      "group": "Appendix",
+      "pages": [
+        "appendix/glossary",
+        "appendix/references"
+=======
         "the-virtual-world/platform-highlights",
         "platform/comparative-analysis"
       ]
@@ -81,6 +170,7 @@
       "group": "For Stakeholders",
       "pages": [
         "platform/value-propositions"
+>>>>>>> parent of 96747fe (Update)
       ]
     }
   ]
