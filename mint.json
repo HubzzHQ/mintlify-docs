@@ -45,11 +45,6 @@
       "name": "Newsletter",
       "icon": "newspaper",
       "url": "https://substack.com/@hubzz"
-    },
-    {
-      "name": "Content Archive",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
     }
   ],
   "navigation": [
@@ -90,7 +85,7 @@
   "footerSocials": {
     "telegram": "https://t.me/hubzzhq",
     "x": "https://x.com/HubzzHQ",
-    "discord": "https://discord.com/invite/Dy2eZbJuVk"
+    "discord": "https://discord.gg/hubzz"
   },
   "seo": {
     "indexHiddenPages": false
