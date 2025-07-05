@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Hubzz Documentation",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -96,5 +96,8 @@
     "telegram": "https://t.me/hubzzhq",
     "x": "https://x.com/HubzzHQ",
     "discord": "https://discord.com/invite/Dy2eZbJuVk"
+  },
+  "seo": {
+    "indexHiddenPages": false
   }
 }

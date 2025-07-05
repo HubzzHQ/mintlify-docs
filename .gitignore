@@ -1,0 +1,8 @@
+# Cursor IDE configuration
+.cursor/
+
+# Specstory configuration
+.specstory/
+
+# System files
+.DS_Store 
