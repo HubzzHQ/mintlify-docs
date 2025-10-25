@@ -7,12 +7,12 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#735FFA",
-    "light": "#735FFA",
-    "dark": "#735FFA",
+    "primary": "#735ffa",
+    "light": "#735ffa",
+    "dark": "#735ffa",
     "anchors": {
       "from": "#604FD0",
-      "to": "#735FFA"
+      "to": "#735ffa"
     },
     "background": {
       "light": "#FFFFFF",
@@ -31,18 +31,42 @@
   },
   "tabs": [
     {
-      "name": "Whitepaper",
-      "url": "api-reference"
+      "name": "Overview",
+      "url": "overview"
+    },
+    {
+      "name": "Virtual World",
+      "url": "virtual-world"
+    },
+    {
+      "name": "Event System",
+      "url": "event-system"
+    },
+    {
+      "name": "Digital Merch",
+      "url": "digital-merch"
+    },
+    {
+      "name": "Social Layer",
+      "url": "social-layer"
+    },
+    {
+      "name": "Game Economy",
+      "url": "game-economy"
+    },
+    {
+      "name": "Bluepaper",
+      "url": "bluepaper"
     }
   ],
   "anchors": [
     {
-      "name": "Community",
+      "name": "Join Discord",
       "icon": "discord",
       "url": "https://discord.gg/hubzz"
     },
     {
-      "name": "Newsletter",
+      "name": "Get Newsletter",
       "icon": "newspaper",
       "url": "https://substack.com/@hubzz"
     }
@@ -51,34 +75,54 @@
     {
       "group": "Introduction",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "overview/index",
+        "overview/where-we-fit",
+        "overview/how-we-differ",
+        "overview/use-cases"
       ]
     },
     {
-      "group": "The Virtual World",
+      "group": "The Experience",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "overview/the-experience/index",
+        "overview/the-experience/for-communities",
+        "overview/the-experience/for-creators",
+        "overview/the-experience/for-brands"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Gamification",
       "pages": [
-        "api-reference/introduction"
+        "overview/gamification/index"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Links & Resources",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "overview/content-archive",
+        "overview/media-brand-kit"
+      ]
+    },
+    {
+      "group": "Virtual World",
+      "pages": [
+        "virtual-world/index",
+        "virtual-world/zone-based-architecture"
+      ]
+    },
+    {
+      "group": "Core Systems",
+      "pages": [
+        "event-system/index",
+        "digital-merch/index",
+        "social-layer/index",
+        "game-economy/index"
+      ]
+    },
+    {
+      "group": "Technical Documentation",
+      "pages": [
+        "bluepaper/index"
       ]
     }
   ],
