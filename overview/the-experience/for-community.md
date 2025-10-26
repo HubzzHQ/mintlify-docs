@@ -1,3 +1,3 @@
 ---
-title: For Community
+title: For Communities
 ---
