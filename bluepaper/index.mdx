@@ -2,3 +2,94 @@
 title: "Bluepaper"
 description: "Technical documentation and architecture of Hubzz"
 ---
+
+## **1. Core Player System ERD**
+
+The core player system manages user accounts, authentication, XP progression, and spatial tracking.
+
+### Entity Relationship Diagram
+
+```mermaid
+erDiagram
+	Players ||--o{ PlayerRoles : "has"
+	Players ||--o{ Zones : "owns"
+	Players ||--o{ Properties : "owns"
+	Players ||--o{ PropertyKeys : "owns"
+	Players ||--o{ XPTransactions : "earns"
+	Players ||--o{ PlayerBadges : "receives"
+    
+	Players {
+		int PlayerID PK
+		string Username
+		string Email
+		int SpendableXP
+		int LockedXP
+		int LifetimeXP
+		decimal Credits
+		enum MembershipStatus
+		enum CurrentStatus
+		string PrimaryWalletAddress
+		---
+		title: "Bluepaper"
+		description: "Technical documentation and architecture of Hubzz"
+		---
+
+		# HUBZZ Complete ERD - Core Player System
+
+		This is the complete, production-ready database schema for the Hubzz metaverse platform.
+
+		## 1. Core Player System
+
+		The player system manages user accounts, XP (HBX tokens), currency (HBC), and player profiles.
+
+		```mermaid
+		erDiagram
+			Players {
+				INT PlayerID PK
+				VARCHAR Username
+				VARCHAR Email
+				VARCHAR PasswordHash
+				INT SpendableXP
+				INT LockedXP
+				INT LifetimeXP
+				DECIMAL Credits
+				ENUM MembershipStatus
+				ENUM CurrentStatus
+				VARCHAR DisplayName
+				TEXT Bio
+				VARCHAR AvatarImageURL
+				DATE DateOfBirth
+				VARCHAR Country
+				VARCHAR Timezone
+				VARCHAR Language
+				BOOLEAN IsActive
+				BOOLEAN IsBanned
+				TEXT BanReason
+				DATETIME BanExpiresAt
+				BOOLEAN EmailVerified
+				VARCHAR PrimaryWalletAddress
+				BOOLEAN WalletConnected
+				DATETIME LastLoginDate
+				INT LoginCount
+				INT TotalPlayTime
+				DATETIME JoinDate
+				INT ReferredBy
+				VARCHAR RegistrationSource
+				INT CurrentZoneID
+				DECIMAL CurrentX
+				DECIMAL CurrentY
+				DECIMAL CurrentZ
+				DATETIME LastActive
+				INT BoxesCollected
+			}
+    
+			Players ||--o{ Players : "refers"
+			Players ||--o| Zones : "current_zone"
+		```
+
+		### Key Features
+
+		- **XP System (HBX Token)**: SpendableXP for gas fees, LockedXP for moderation, LifetimeXP for level badges
+		- **Primary Currency**: HBC balance tracked in Credits field
+		- **Blockchain Integration**: Ethereum wallet address support
+		- **Spatial Tracking**: Current zone and 3D coordinates (X, Y, Z)
